@@ -1,6 +1,7 @@
 import React from "react";
 import bodyImage from "../assets/images/bodyImage.png";
 import bgImage from "../assets/images/bg.png";
+import Icon from "../assets/images/Icon.png";
 
 const Body = () => {
   return (
@@ -29,19 +30,26 @@ const Body = () => {
       </div>
 
       {/* Text Section */}
-      <div className="bg-[#1a1a1a] flex flex-col items-center justify-center gap-12 w-full h-[900px]">
-        <h2 className="text-white text-5xl text-center">
-          An extraordinary note <br /> for{" "}
-          <span className="text-[#00BB77]">makers, creators..</span>
-        </h2>
-        <span>
-          <img src={bodyImage} alt="Icon" className="w-[160px] h-[160px]" />
-        </span>
-        <p className="text-white text-xl text-center">
-          Creators around the planet use this app <br />
-          for creating <span className="text-[#00BB77]">magic.</span>
-        </p>
-      </div>
+<div className="bg-[#1a1a1a] flex flex-col items-center justify-center gap-8 md:gap-12 w-full min-h-[700px] md:h-[900px] px-4 md:px-0">
+  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl text-center leading-snug">
+    An extraordinary note <br /> for{" "}
+    <span className="text-[#00BB77]">makers, creators..</span>
+  </h2>
+
+  <span>
+    <img
+      src={Icon}
+      alt="Icon"
+      className="w-[120px] sm:w-[140px] md:w-[160px] h-[120px] sm:h-[140px] md:h-[160px]"
+    />
+  </span>
+
+  <p className="text-white text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl">
+    Creators around the planet use this app <br />
+    for creating <span className="text-[#00BB77]">magic.</span>
+  </p>
+</div>
+
     </>
   );
 };
