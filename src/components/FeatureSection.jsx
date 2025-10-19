@@ -35,15 +35,16 @@ export default function FeatureSection() {
             every day.
           </p>
 
-          <div className="mt-6 overflow-x-auto scroll-smooth -mx-5 px-5">
-            <div className="flex gap-4 flex-nowrap">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="min-w-[260px] flex-shrink-0">
-                  <FeatureCard featureName={`Feature\nName ${i}`} />
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="mt-6 overflow-x-auto scroll-smooth -mx-5 px-5 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+  <div className="flex gap-4 flex-nowrap">
+    {[1, 2, 3, 4, 5, 6].map((i) => (
+      <div key={i} className="min-w-[260px] flex-shrink-0">
+        <FeatureCard featureName={`Feature\nName ${i}`} />
+      </div>
+    ))}
+  </div>
+</div>
+
 
           <p className="mt-6 text-2xl sm:text-3xl font-medium leading-snug">
             Creative people worldwide rely on this app to craft ideas into{" "}
