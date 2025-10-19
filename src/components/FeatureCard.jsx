@@ -18,12 +18,10 @@ const FeatureCard = ({ featureName }) => {
       "
       style={{ width: "388px", height: "320px" }}
     >
-      {/* Text */}
       <span className="text-white font-medium text-2xl leading-snug">
         {featureName}
       </span>
 
-      {/* Hover Icon */}
       <FiArrowUpRight
         className="
           absolute top-1/2 left-1/2

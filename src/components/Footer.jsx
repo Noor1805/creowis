@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const Footer = () => {
   return (
     <footer className="py-[80px] px-[40px] flex flex-col gap-16 bg-[#1C1C1C] md:flex md:col">
-      {/* Left Section */}
+      
       <div className="flex justify-between">
         <div className="flex items-between items-center gap-2">
           <img src={logo} alt="" />

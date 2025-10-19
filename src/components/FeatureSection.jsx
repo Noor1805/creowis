@@ -6,14 +6,13 @@ export default function FeatureSection() {
 
   useEffect(() => {
     const handleResize = () => setIsMdUp(window.innerWidth >= 768);
-    handleResize(); // initialize correctly
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <section aria-labelledby="key-features-heading">
-      {/* Mobile */}
       {!isMdUp && (
         <div className="md:hidden bg-black text-white px-5 pt-20 pb-16 min-h-screen">
           {/* Button */}
@@ -71,24 +70,20 @@ export default function FeatureSection() {
 
       {isMdUp && (
         <div className="pt-[120px] md:pt-[160px] pb-8 px-6 md:px-[60px] bg-black min-h-screen">
-          {/* Button */}
           <button className="rounded-full w-[110px] md:w-[122px] h-[30px] md:h-[32px] text-xs md:text-sm leading-[19.6px] py-[6px] px-[12px] bg-[#00BB77]">
             What's the best
           </button>
 
-          {/* Heading */}
           <h2 className="font-medium text-4xl md:text-[100px] text-white mt-4">
             Key features
           </h2>
 
-          {/* Paragraph */}
           <p className="text-base md:text-2xl text-white mt-3">
             We’re proud to announce with the features{" "}
             <br className="hidden md:block" />
             that empower creatives every day.
           </p>
 
-          {/* Features 1 & 2 */}
           <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 mt-8">
             <div className="w-[260px]  md:w-[320px] lg:w-[400px]">
               <FeatureCard featureName={"Feature\nName 1"} />
@@ -98,14 +93,12 @@ export default function FeatureSection() {
             </div>
           </div>
 
-          {/* Feature 3 centered */}
           <div className="flex justify-center mt-8">
             <div className="w-[260px] md:w-[320px] lg:w-[400px]">
               <FeatureCard featureName={"Feature\nName 3"} />
             </div>
           </div>
 
-          {/* Paragraph “Creative people…” */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-1 mt-8 overflow-hidden">
             <p className="text-white text-2xl md:text-4xl md:w-[55%] lg:w-[55%] lg:text-6xl font-medium text-center md:text-left">
               Creative people worldwide rely <br className="hidden md:block" />{" "}
@@ -117,7 +110,6 @@ export default function FeatureSection() {
             </div>
           </div>
 
-          {/* Last two features */}
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-6 mt-6">
             <div className="w-[260px] md:w-[320px] lg:w-[400px]">
               <FeatureCard featureName={"Feature\nName 5"} />

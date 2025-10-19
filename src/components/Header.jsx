@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Ticker Bar */}
+      
       <div className="bg-emerald-500 overflow-hidden py-2 hidden md:block">
         <div className="flex animate-scroll whitespace-nowrap">
           {[...Array(3)].map((_, i) => (
@@ -57,15 +57,15 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <span className="relative flex items-center bg-white rounded-full border-2 border-white overflow-hidden group w-[120px] h-[48px] md:w-[150px] md:h-[60px] cursor-pointer">
-            {/* Sliding background */}
+          
             <span className="absolute left-0 top-0 w-0 h-full bg-black transition-all duration-500 ease-in-out group-hover:w-full rounded-full"></span>
 
-            {/* Icon */}
+            
             <span className="bg-black relative flex items-center justify-center rounded-full h-[40px] w-[40px] md:h-[52px] md:w-[52px] ml-1 transition-colors duration-500 ease-in-out group-hover:text-white">
               <FiShoppingCart className="text-[#00BB77] text-lg md:text-xl group-hover:text-white transition-colors duration-500" />
             </span>
 
-            {/* Button text */}
+            
             <button className="relative flex-1 text-black font-medium text-sm md:text-lg transition-colors duration-500 ease-in-out group-hover:text-white">
               Try Now
             </button>
