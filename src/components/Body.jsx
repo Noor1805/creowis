@@ -1,9 +1,48 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bodyImage from "../assets/images/bodyImage.png";
 import bgImage from "../assets/images/bg.png";
 import Icon from "../assets/images/Icon.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Body = () => {
+  const iconRef = useRef(null);
+  const headingRef = useRef(null);
+  const paraRef = useRef(null);
+
+  useEffect(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: iconRef.current,
+      start: "top 80%",
+    },
+  });
+
+  // Icon bounce
+  tl.fromTo(
+    iconRef.current,
+    { y: -500, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1, ease: "bounce.out" }
+  )
+    // Heading from right, thoda overlap
+    .fromTo(
+      headingRef.current,
+      { x: 100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1 },
+      "-=0.5" // icon bounce ke end ke 0.5s pe start ho
+    )
+    // Paragraph from left, aur thoda overlap
+    .fromTo(
+      paraRef.current,
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1 },
+      "-=0.5"
+    );
+}, []);
+
+
   return (
     <>
       <div className="flex justify-center bg-black w-full h-[900px] relative">
@@ -28,12 +67,15 @@ const Body = () => {
       </div>
 
       <div className="bg-[#1a1a1a] flex flex-col items-center justify-center gap-8 md:gap-12 w-full min-h-[700px] md:h-[900px] px-4 md:px-0">
-        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl text-center leading-snug">
+        <h2
+          ref={headingRef}
+          className="text-white text-3xl sm:text-4xl md:text-5xl text-center leading-snug"
+        >
           An extraordinary note <br /> for{" "}
           <span className="text-[#00BB77]">makers, creators..</span>
         </h2>
 
-        <span>
+        <span ref={iconRef}>
           <img
             src={Icon}
             alt="Icon"
@@ -41,7 +83,10 @@ const Body = () => {
           />
         </span>
 
-        <p className="text-white text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl">
+        <p
+          ref={paraRef}
+          className="text-white text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl"
+        >
           Creators around the planet use this app <br />
           for creating <span className="text-[#00BB77]">magic.</span>
         </p>
@@ -51,4 +96,5 @@ const Body = () => {
 };
 
 export default Body;
+
 
