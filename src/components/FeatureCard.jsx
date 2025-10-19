@@ -14,7 +14,7 @@ const FeatureCard = ({ featureName }) => {
         group
         transition-all duration-300 ease-in-out
         hover:border-[#00BB77]
-        rounded-[20px]    rounded-br-2xl     
+        rounded-[20px] rounded-br-2xl
       "
       style={{ width: "388px", height: "320px" }}
     >
@@ -28,11 +28,11 @@ const FeatureCard = ({ featureName }) => {
           transform -translate-x-1/2 -translate-y-1/2
           text-[#00BB77]
           opacity-0 scale-75
-          transition-all duration-300 ease-in-out
+          transition-all duration-500 ease-out
           group-hover:opacity-100
-          group-hover:scale-150
-          group-hover:translate-x-[350%]
-          group-hover:-translate-y-[350%]
+          group-hover:scale-180
+          group-hover:translate-x-[300%]
+          group-hover:-translate-y-[300%]
         "
         size={32}
       />
@@ -41,3 +41,4 @@ const FeatureCard = ({ featureName }) => {
 };
 
 export default FeatureCard;
+

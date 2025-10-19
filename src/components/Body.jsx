@@ -67,8 +67,8 @@ const Body = () => {
 
   return (
     <>
-      <div className="hidden md:flex items-center justify-center bg-black w-full md:h-[650px] lg:h-[750px] relative overflow-hidden px-4 lg:px-20">
-        {/* Background Image */}
+      <div className="hidden md:flex items-center justify-center bg-black w-full md:h-[650px] lg:h-[850px] relative overflow-hidden px-4 lg:px-20">
+        
         <img
           ref={bgRef}
           src={bgImage}
@@ -76,7 +76,7 @@ const Body = () => {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[725px] object-contain opacity-90"
         />
 
-        {/* Left Text */}
+       
         <div
           ref={noteRef}
           className="absolute left-[4%] md:left-[4%] lg:left-[4%] xl:left-[8%] 2xl:left-[8%] top-[40%] md:top-[35%] xl:top-[30%] -translate-y-[40%] z-10 max-w-[35vw]"
@@ -86,7 +86,7 @@ const Body = () => {
           </h1>
         </div>
 
-        {/* Right Text */}
+        
         <div
           ref={redefinedRef}
           className="absolute right-[4%] md:right-[4%] lg:right-[5%] xl:right-[9%] 2xl:right-[12%] top-[48%] -translate-y-[40%] z-10 max-w-[35vw]"

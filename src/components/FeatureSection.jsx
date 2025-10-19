@@ -54,7 +54,7 @@ export default function FeatureSection() {
       )}
 
       {isLgUp && (
-        <div className="pt-[120px] md:pt-[160px] pb-8 px-6 md:px-12 lg:px-20 bg-black min-h-screen">
+        <div className="pt-[120px] md:pt-[160px] pr-[40px] pl-[140px] pb-8 px-6 md:px-12 lg:px-20 bg-black min-h-screen">
           <button className="rounded-full w-[122px] h-[32px] text-sm leading-[19.6px] py-[6px] px-[12px] bg-[#00BB77]">
             What's the best
           </button>

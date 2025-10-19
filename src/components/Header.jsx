@@ -29,7 +29,7 @@ export default function Header() {
             scrolled ? "-translate-y-full" : "translate-y-0"
           }`}
         >
-          <div className="flex animate-scroll whitespace-nowrap min-w-max justify-center w-full">
+          <div className="flex animate-scroll  whitespace-nowrap min-w-max justify-center w-full">
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
@@ -47,9 +47,8 @@ export default function Header() {
         </div>
       )}
 
-      {/* Navbar */}
       <header
-        className={`fixed left-0 w-full z-30 flex items-center justify-between px-8 py-4 backdrop-blur-md bg-black/20 transition-all duration-300 ${
+        className={`fixed h-[104px] left-0 w-full z-30 flex items-center justify-between pt-[38px] pr-[40px] pb-[24px] pl-[40px] py-4 backdrop-blur-md bg-black/20 transition-all duration-300 ${
           isMdUp ? (scrolled ? "top-0" : "top-4") : "top-0"
         }`}
       >
@@ -58,7 +57,7 @@ export default function Header() {
           <span className="text-lg font-bold text-white">CirriNote</span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-white font-medium">
+        <nav className="hidden md:flex items-center gap-[64px] text-white font-[14px]">
           <a href="#" className="hover:text-emerald-500 transition-colors">
             About
           </a>
