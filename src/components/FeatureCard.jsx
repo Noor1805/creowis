@@ -5,7 +5,6 @@ const FeatureCard = ({ featureName }) => {
     <div
       className="
         shrink-0
-        rounded-2xl
         bg-[#1e1e1e]/90
         border border-white/10
         flex items-end
@@ -15,13 +14,16 @@ const FeatureCard = ({ featureName }) => {
         group
         transition-all duration-300 ease-in-out
         hover:border-[#00BB77]
+        rounded-[20px]    rounded-br-2xl     
       "
-      style={{ width: "388px", height: "320px" }} // use Tailwind responsive or fixed sizes in parent if needed
+      style={{ width: "388px", height: "320px" }}
     >
+      {/* Text */}
       <span className="text-white font-medium text-2xl leading-snug">
         {featureName}
       </span>
 
+      {/* Hover Icon */}
       <FiArrowUpRight
         className="
           absolute top-1/2 left-1/2

@@ -21,35 +21,36 @@ const Body = () => {
 
           {/* Mobile Texts */}
           <div className="absolute  top-16 left-10 z-10 flex flex-col gap-3">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">Note-Taking</h1>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl  font-bold text-emerald-500">Redefined</h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">
+              Note-Taking
+            </h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl  font-bold text-emerald-500">
+              Redefined
+            </h1>
           </div>
         </div>
-
-        
       </div>
 
       {/* Text Section */}
-<div className="bg-[#1a1a1a] flex flex-col items-center justify-center gap-8 md:gap-12 w-full min-h-[700px] md:h-[900px] px-4 md:px-0">
-  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl text-center leading-snug">
-    An extraordinary note <br /> for{" "}
-    <span className="text-[#00BB77]">makers, creators..</span>
-  </h2>
+      <div className="bg-[#1a1a1a] flex flex-col items-center justify-center gap-8 md:gap-12 w-full min-h-[700px] md:h-[900px] px-4 md:px-0">
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl text-center leading-snug">
+          An extraordinary note <br /> for{" "}
+          <span className="text-[#00BB77]">makers, creators..</span>
+        </h2>
 
-  <span>
-    <img
-      src={Icon}
-      alt="Icon"
-      className="w-[120px] sm:w-[140px] md:w-[160px] h-[120px] sm:h-[140px] md:h-[160px]"
-    />
-  </span>
+        <span>
+          <img
+            src={Icon}
+            alt="Icon"
+            className="w-[120px] sm:w-[140px] md:w-[160px] h-[120px] sm:h-[140px] md:h-[160px]"
+          />
+        </span>
 
-  <p className="text-white text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl">
-    Creators around the planet use this app <br />
-    for creating <span className="text-[#00BB77]">magic.</span>
-  </p>
-</div>
-
+        <p className="text-white text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl">
+          Creators around the planet use this app <br />
+          for creating <span className="text-[#00BB77]">magic.</span>
+        </p>
+      </div>
     </>
   );
 };
