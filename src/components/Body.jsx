@@ -20,20 +20,20 @@ const Body = () => {
     },
   });
 
-  // Icon bounce
+  
   tl.fromTo(
     iconRef.current,
     { y: -500, opacity: 0 },
     { y: 0, opacity: 1, duration: 1, ease: "bounce.out" }
   )
-    // Heading from right, thoda overlap
+    
     .fromTo(
       headingRef.current,
       { x: 100, opacity: 0 },
       { x: 0, opacity: 1, duration: 1 },
-      "-=0.5" // icon bounce ke end ke 0.5s pe start ho
+      "-=0.5" 
     )
-    // Paragraph from left, aur thoda overlap
+    
     .fromTo(
       paraRef.current,
       { x: -100, opacity: 0 },
